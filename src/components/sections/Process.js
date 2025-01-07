@@ -1,7 +1,7 @@
 import React from 'react';
 
 const ProcessPhase = ({ phase, title, description, items }) => (
-    <div className="relative pl-8 md:pl-0 md:grid md:grid-cols-3 md:gap-8 items-center">
+    <div className="relative md:pl-8 md:pl-0 md:grid md:grid-cols-3 md:gap-8 items-center">
         <div className="md:col-span-1">
             <div className="bg-indigo-600 text-white p-6 rounded-xl">
                 <h3 className="text-2xl font-bold mb-2">Phase {phase}</h3>
