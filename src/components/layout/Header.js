@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from 'react';
-import BookingModal from '@/components/ui/BookingModal';
+import BookingModal from '../../components/ui/BookingModal';
 
 export default function Header() {
     const [isModalOpen, setIsModalOpen] = useState(false);
