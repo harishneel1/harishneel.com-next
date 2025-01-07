@@ -5,34 +5,33 @@ import React, { useState } from 'react';
 const TabButton = ({ id, title, icon, isActive, onClick }) => (
     <button
         onClick={() => onClick(id)}
-        className={`flex-1 relative px-6 py-8 group transition-all duration-300 ${isActive ? 'text-indigo-600' : 'text-gray-500 hover:text-indigo-600'
+        className={`flex-1 relative px-4 py-4 group transition-all duration-300 ${isActive ? 'text-indigo-600' : 'text-gray-500 hover:text-indigo-600'
             }`}
     >
-        <div className="flex flex-col items-center gap-3">
-            <div className={`p-3 rounded-xl transition-colors duration-300 ${isActive ? 'bg-indigo-50' : 'bg-gray-50 group-hover:bg-indigo-50'
+        <div className="flex items-center gap-3 justify-center">
+            <div className={`p-2 rounded-lg transition-colors duration-300 ${isActive ? 'bg-indigo-50' : 'bg-gray-50 group-hover:bg-indigo-50'
                 }`}>
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     {icon}
                 </svg>
             </div>
-            <span className="font-medium text-lg">{title}</span>
+            <span className="font-medium">{title}</span>
         </div>
         {isActive && (
             <div className="absolute bottom-0 left-0 w-full h-0.5 bg-indigo-600" />
         )}
     </button>
 );
-
 const FeatureCard = ({ icon, title, description }) => (
-    <div className="flex gap-4 bg-white p-6 rounded-xl border border-gray-100 hover:border-indigo-100 hover:shadow-md transition-all group">
-        <div className="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-lg bg-gradient-to-br from-indigo-50 to-indigo-100 text-indigo-600 group-hover:from-indigo-100 group-hover:to-indigo-200 transition-all">
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <div className="flex gap-3 bg-white p-4 rounded-xl border border-gray-100 hover:border-indigo-100 hover:shadow-md transition-all group">
+        <div className="flex-shrink-0 w-10 h-10 flex items-center justify-center rounded-lg bg-gradient-to-br from-indigo-50 to-indigo-100 text-indigo-600 group-hover:from-indigo-100 group-hover:to-indigo-200 transition-all">
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 {icon}
             </svg>
         </div>
         <div>
-            <h4 className="text-lg font-semibold text-gray-900 mb-2">{title}</h4>
-            <p className="text-gray-600">{description}</p>
+            <h4 className="text-base font-semibold text-gray-900 mb-1">{title}</h4>
+            <p className="text-sm text-gray-600">{description}</p>
         </div>
     </div>
 );
@@ -146,10 +145,10 @@ const Services = () => {
             <div className="container mx-auto px-6">
                 <div className="text-center mb-16">
                     <h2 className="text-4xl font-bold text-gray-900 mb-4">
-                        Transform Your Business With AI
+                        AI Solutions That Actually Work
                     </h2>
                     <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                        Enterprise-grade AI solutions with guaranteed ROI
+                        From custom tools to automation, we deliver measurable results in weeks, not months
                     </p>
                 </div>
 
@@ -167,17 +166,17 @@ const Services = () => {
                     </div>
 
                     {/* Tab Content */}
-                    <div className="p-8">
-                        <div className="text-center mb-12">
+                    <div className="p-6">
+                        <div className="text-center mb-8">
                             <div className="inline-flex items-center px-4 py-2 bg-indigo-50 rounded-full text-indigo-600 font-medium text-sm mb-4">
                                 {currentTabContent.metric}
                             </div>
-                            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                            <p className="text-lg text-gray-600 max-w-3xl mx-auto"> {/* Changed from text-xl */}
                                 {currentTabContent.description}
                             </p>
                         </div>
 
-                        <div className="grid md:grid-cols-3 gap-6">
+                        <div className="grid md:grid-cols-3 gap-4"> {/* Reduced gap from 6 to 4 */}
                             {currentTabContent.features.map((feature, index) => (
                                 <FeatureCard key={index} {...feature} />
                             ))}
