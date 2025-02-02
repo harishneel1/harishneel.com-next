@@ -1,4 +1,4 @@
-import ChiroCaseStudy from '@/components/case-studies/ChiroCaseStudy'
+import ChiroCaseStudy from '../../../components/case-studies/ChiroCaseStudy'
 import React from 'react'
 
 const page = () => {
