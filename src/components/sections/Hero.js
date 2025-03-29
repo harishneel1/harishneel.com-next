@@ -55,7 +55,7 @@ export default function Hero() {
                             {/* Social links - now more subtle and integrated */}
                             <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 flex items-center gap-2 bg-white/90 backdrop-blur-sm rounded-full px-4 py-2 shadow-lg border border-gray-100 z-20">
                                 <a
-                                    href="https://linkedin.com"
+                                    href="https://www.linkedin.com/in/harishneel/"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="p-2 hover:bg-gray-50 rounded-full transition-colors"
@@ -68,7 +68,7 @@ export default function Hero() {
                                 <div className="w-px h-4 bg-gray-200"></div>
 
                                 <a
-                                    href="https://youtube.com"
+                                    href="https://www.youtube.com/@harish_neel"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="p-2 hover:bg-gray-50 rounded-full transition-colors"
