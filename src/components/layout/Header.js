@@ -2,6 +2,8 @@
 
 import { useState } from 'react';
 import BookingModal from '../../components/ui/BookingModal';
+import Link from 'next/link';
+
 
 export default function Header() {
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -18,7 +20,7 @@ export default function Header() {
                                 <a href="#process" className="nav-link text-gray-600 hover:text-indigo-600">Process</a>
                                 {/* <a href="#case-studies" className="nav-link text-gray-600 hover:text-indigo-600">Case Studies</a> */}
                                 <a href="#about" className="nav-link text-gray-600 hover:text-indigo-600">About</a>
-                                <a href="#code" className="nav-link text-gray-600 hover:text-indigo-600">Code</a>
+                                <Link href="/code" className="nav-link text-gray-600 hover:text-indigo-600">Code</Link>
                             </div>
                         </div>
                         <div className="flex items-center space-x-6">
