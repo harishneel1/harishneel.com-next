@@ -16,7 +16,7 @@ export async function POST(request) {
             headers: {
                 'Content-Type': 'application/json',
                 'Accept': 'application/json',
-                'Authorization': `Bearer ${apiKey}`
+                'X-Kit-Api-Key': `${apiKey}`
             },
             body: JSON.stringify({
                 email_address: email,
