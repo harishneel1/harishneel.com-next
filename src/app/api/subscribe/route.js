@@ -26,7 +26,17 @@ export async function POST(request) {
 
         const data = await response.json();
 
-        if (!response.ok) {
+        if (response.ok) {
+            fetch(`https://api.kit.com/v4/tags/${process.env.KIT_TAG_ID}/subscribers/${data.subscriber?.id}`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json',
+                    'X-Kit-Api-Key': `${apiKey}`
+                }
+            })
+        }
+        else {
             console.error('Kit API error:', data);
             return NextResponse.json(
                 { error: 'Failed to subscribe' },
